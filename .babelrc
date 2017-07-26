@@ -4,6 +4,8 @@
 
     ],
     "plugins": [
-        "transform-runtime", ["import", { "libraryName": "antd-mobile" }]
+        "transform-runtime", ["import", { "libraryName": "antd", "style": "css" }]
     ]
+
+
 }
