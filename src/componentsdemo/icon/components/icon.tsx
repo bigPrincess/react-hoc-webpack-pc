@@ -1,31 +1,42 @@
 import * as React from 'react';
+import { hoc } from '../containers/icon';
+import { IProps } from '../constants/icon';
+import { IconComments } from "../../../components/icons";
 import { Link } from "react-router-dom";
-import { hoc } from '../containers/imgzoomin';
-import { IProps } from '../constants/imgzoomin';
 import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
-import '../styles/imgzoomin.scss';
+import '../styles/icon.scss';
 
-export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
+export class IconDemoComponent extends React.Component<IProps, any> {
     render() {
-        let ImgZoomInDemoApiData = [{
-            props:"imgUrl",
-            des:"图片地址",
+        let IconDemoApiData = [{
+            props:"type",
+            des:"icon类型",
             type:"string",
             default:"不传则为无"
         },{
-            props:"className",
-            des:"图片类名",
+            props:"width",
+            des:"icon宽",
+            type:"number",
+            default:"37.5"
+        },{
+            props:"height",
+            des:"icon高",
+            type:"number",
+            default:"37.5"
+        },{
+            props:"color",
+            des:"icon颜色",
             type:"string",
-            default:"不传则为无"
+            default:"#666"
         }]
         return (
-            <div className="img-zoom-in-demo-content">
+            <div className="icon-demo-content">
                 <Link to="/components" className="back">
                      返回demo主页面
                 </Link>
-                <h4>图片放大 API:</h4>
-                    <table>
+                <h4>icon图标 API:</h4>
+                <table>
                         <thead>
                             <tr>
                                 <th>属性</th>
@@ -36,7 +47,7 @@ export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
                         </thead>
                         <tbody>
                             {
-                                ImgZoomInDemoApiData.map((item,index)=>{
+                                IconDemoApiData.map((item,index)=>{
                                     return <tr>
                                         <td>{item.props}</td>
                                         <td>{item.des}</td>
@@ -47,10 +58,14 @@ export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
                             }
                         </tbody>
                     </table>
-                    <ImgZoomInComponent imgUrl="../../assets/images/img_zoom_in.png" className="img-zoom-in-btn"/>
+                <p>demo：</p>
+                <IconComments type="picture" width={40} height={40} color="#444"/>
+                 
+                <p>具体代码：</p>
+                <ImgZoomInComponent imgUrl="../../assets/images/icon.png"/>
             </div>
         );
     }
 }
 
-export const ImgZoomInDemoComponentWithHoc = hoc(ImgZoomInDemoComponent);
+export const IconDemoComponentWithHoc = hoc(IconDemoComponent);

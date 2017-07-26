@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 import { hoc } from '../containers/imgzoomin';
 import { IProps } from '../constants/imgzoomin';
-import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
 import '../styles/imgzoomin.scss';
+import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
 export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
     render() {
