@@ -1,0 +1,7 @@
+node_modules
+typings
+.vscode
+.awcache
+./typings.json
+.history
+.idea/

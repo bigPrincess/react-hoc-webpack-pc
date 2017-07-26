@@ -1,0 +1,81 @@
+.http-demo-content {
+    h1 {
+        font-size: 20px;
+        margin: 8px;
+        color: #404040;
+    }
+    h3 {
+        font-size: 17px;
+        color: cornflowerblue;
+        // font-weight: normal;
+        margin: 0 0 10px 16px;
+    }
+    .choose-content {
+        padding: 8px;
+        .choose-title {
+            font-size: 14px;
+            color: #999;
+            line-height: 16px;
+            height: 16px;
+            margin-right: 10px;
+            width: 60px;
+            display: inline-block;
+        }
+        .choose-label {
+            line-height: 16px;
+            height: 16px;
+            color: #444;
+            font-size: 13px;
+            input[type="radio"] {
+                margin: 8px;
+            }
+        }
+    }
+    .operation {
+        display: block;
+        width: 100%;
+        .btn {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: cornflowerblue;
+            color: #fff;
+            min-width: 80px;
+            text-align: center;
+            border-radius: 5px;
+            margin-right: 8px;
+        }
+    }
+    .result-content {
+        margin-top: 15px;
+        padding: 15px 0;
+        .info {
+            margin: 8px 8px 8px 25px;
+            .info-title {
+                width: 60px;
+                font-size: 13px;
+                display: inline-block;
+                color: #999;
+                margin-right: 62px;
+            }
+            .info-detail {
+                font-size: 13px;
+                display: inline-block;
+                color: #444;
+                margin-right: 4px;
+                word-wrap: break-word;
+                max-width: 100%;
+            }
+        }
+        .result {
+            .detail {
+                display: block;
+                max-height: 300px;
+                overflow: auto;
+                margin: 8px;
+                border: 1px #999 solid;
+                padding: 10px;
+                color: #666;
+            }
+        }
+    }
+}

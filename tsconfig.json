@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
+        "allowJs": false,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "outDir": "libs",
+        "noEmitHelpers": false,
+        "lib": ["es5", "dom", "es2017", "es6", "es2015", "es7"]
+    },
+    "awesomeTypescriptLoaderOptions": {
+        "useBabel": true,
+        "useCache": true,
+        "emitRequireType": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
