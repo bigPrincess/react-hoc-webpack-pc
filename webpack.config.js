@@ -35,6 +35,7 @@ module.exports = (webpackConfig) => {
         __STAG__: JSON.stringify(process.env.NODE_ENV === 'stg'),
     }));
 
+
     retVal.output.publicPath = '/';
 
     return retVal;
