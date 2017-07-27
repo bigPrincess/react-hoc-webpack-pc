@@ -268,6 +268,16 @@ export class IconComments extends React.Component<IProps, any> {
                     </g>
                 </svg>
             )
+            case "more": return (
+                <svg viewBox="0 0 44 44" width={iconWidths} height={icoHeight}>
+                    <path d="M22.355 28.237l-11.483-10.9c-.607-.576-1.714-.396-2.48.41l.674-.71c-.763.802-.73 2.071-.282 2.496l11.37 10.793-.04.039 2.088 2.196 1.098-1.043 12.308-11.682c.447-.425.48-1.694-.282-2.496l.674.71c-.766-.806-1.873-.986-2.48-.41L22.355 28.237z" fill-rule="evenodd"></path>
+                </svg>
+            )
+            case "uparrow": return (
+                <svg width={iconWidths} height={icoHeight} xmlns='http://www.w3.org/2000/svg' viewBox="0 0 1024 1024" version="1.1" p-id="1378"  >
+                    <path xmlns="http://www.w3.org/2000/svg" d="M65.582671 735.208665l446.417329-446.41733 446.417329 446.41733z" p-id="1493"/>
+                </svg>
+            )
             default: return null;
         }
 
