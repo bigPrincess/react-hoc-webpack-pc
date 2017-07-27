@@ -3,5 +3,5 @@ import { RouterComponent } from './router';
 // export default AccordionApiComponent;
 export {
     AccordionApiComponent,
-    RouterComponent
+    RouterComponent,
 };

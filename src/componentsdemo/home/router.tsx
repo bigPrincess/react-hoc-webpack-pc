@@ -8,6 +8,7 @@ import { RouterComponent as IconDemoRouter } from '../icon';
 import { RouterComponent as ImgCropperDemoRouter } from '../cropperimg';
 import { RouterComponent as MessageDemoRouter } from '../message';
 import { RouterComponent as AccordionDemoRouter } from '../accordion';
+import { ApdaComponentHoc as ApdaComponent} from "../adaptation/components/adaptation";
 
 export class RouterComponent extends React.Component<any, any>{
     render() {
@@ -20,6 +21,7 @@ export class RouterComponent extends React.Component<any, any>{
                 <Route path="/components/cropperimg" component={ImgCropperDemoRouter} />
                 <Route path="/components/message" component={MessageDemoRouter} />
                 <Route path="/components/accordion" component={AccordionDemoRouter} />
+                <Route path="/components/ApdaComponent" component={ApdaComponent} />
                 <Route path="/components" component={HomeComponent} />
             </Switch>
         );
