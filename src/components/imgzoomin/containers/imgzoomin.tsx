@@ -6,7 +6,7 @@ export const hoc = compose<IProps, any>(
     withHandlers({
         zoomIn:(props: IProps)=>{
             return()=>{
-                props.setOpenState(true);
+                props.imgUrl&&props.setOpenState(true);
             }
         },
         zoomOut:(props: IProps)=>{
