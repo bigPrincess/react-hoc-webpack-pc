@@ -10,11 +10,6 @@ import '../styles/home.scss';
 export class HomeComponent extends React.Component<IProps, any> {
     render() {
         let accordarr = [
-                
-            {
-                "name": "Header插件",
-                "url": ""
-            },
             {
                 "name": "http请求",
                 "url": "http"
