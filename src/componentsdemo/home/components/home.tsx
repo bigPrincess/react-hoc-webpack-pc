@@ -10,42 +10,34 @@ import '../styles/home.scss';
 export class HomeComponent extends React.Component<IProps, any> {
     render() {
         let accordarr = [
-                {
-                "name": "公共组件API",
-                "submenu": [
-                    {
-                        "name": "Header插件",
-                        "url": "header"
-                    },
-                    {
-                        "name": "http请求",
-                        "url": "http"
-                    },
-                    {
-                        "name": "图片点击放大",
-                        "url": "imgzoomin"
-                    },
-                    {
-                        "name": "多级折叠菜单",
-                        "url": "accordion"
-                    },
-                    {
-                        "name": "icon图标",
-                        "url": "icon"
-                    },
-                    {
-                        "name": "图片上传、剪切、下载",
-                        "url": "cropperimg"
-                    },
-                    {
-                        "name": "消息提示框,loading等",
-                        "url": "message"
-                    },
-                    {
-                        "name":"自适应",
-                        "url":"ApdaComponent"
-                    }
-                ]
+                
+            {
+                "name": "Header插件",
+                "url": "header"
+            },
+            {
+                "name": "http请求",
+                "url": "http"
+            },
+            {
+                "name": "图片点击放大",
+                "url": "imgzoomin"
+            },
+            {
+                "name": "多级折叠菜单",
+                "url": "accordion"
+            },
+            {
+                "name": "icon图标",
+                "url": "icon"
+            },
+            {
+                "name": "图片上传、剪切、下载",
+                "url": "cropperimg"
+            },
+            {
+                "name":"自适应",
+                "url":"ApdaComponent"
             }
         ]
         return (
