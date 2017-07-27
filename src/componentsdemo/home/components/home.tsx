@@ -34,7 +34,7 @@ export class HomeComponent extends React.Component<IProps, any> {
                         "url": "icon"
                     },
                     {
-                        "name": "图片上传、剪切、下载",
+                        "name": "图片上传、剪切",
                         "url": "cropperimg"
                     },
                     {
