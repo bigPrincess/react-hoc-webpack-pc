@@ -1,30 +1,20 @@
 import * as React from 'react';
 import { Link } from "react-router-dom";
-import { hoc } from '../containers/cropperimg';
-import { IProps } from '../constants/cropperimg';
-import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
-import '../styles/cropperimg.scss';
+import { hoc } from '../containers/accordion';
+import { IProps } from '../constants/accordion';
 
-export class CropperImgDemoComponent extends React.Component<IProps, any> {
+import '../styles/accordion.scss';
+
+export class AccordionApiComponent extends React.Component<IProps, any> {
     render() {
-        let ImgZoomInDemoApiData = [{
-            props:"imgUrl",
-            des:"图片地址",
-            type:"string",
-            default:"不传则为无"
-        },{
-            props:"className",
-            des:"图片类名",
-            type:"string",
-            default:"不传则为无"
-        }]
         return (
-            <div className="cropper-img-demo-content">
+            <div className="header-demo-content">
                 <Link to="/components" className="back">
                      返回demo主页面
                 </Link>
-                <h4>cropperimg API:</h4>
+                <div>
+                    <h4>Accordion API:</h4>
                     <table>
                         <thead>
                             <tr>
@@ -35,8 +25,8 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                             </tr>
                         </thead>
                         <tbody>
-                            {
-                                ImgZoomInDemoApiData.map((item,index)=>{
+                            {/*{
+                                headerApiData.map((item,index)=>{
                                     return <tr>
                                         <td>{item.props}</td>
                                         <td>{item.des}</td>
@@ -44,13 +34,19 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                                         <td>{item.default}</td>
                                     </tr>
                                 })
-                            }
+                            }*/}
                         </tbody>
                     </table>
-                    <ImgZoomInComponent imgUrl="../../assets/images/img_zoom_in.png" className="img-zoom-in-btn"/>
+                </div>
+                <div>
+                    <h4>DEMO:</h4>
+                    <Link to="/components/accordion/accordiondemo" className="demo-title">
+                        点击查看 多级折叠菜单的demo
+                    </Link>
+                </div>
             </div>
         );
     }
 }
 
-export const CropperImgDemoComponentWithHoc = hoc(CropperImgDemoComponent);
+export const AccordionApiComponentWithHoc = hoc(AccordionApiComponent);
