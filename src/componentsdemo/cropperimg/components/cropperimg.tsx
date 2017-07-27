@@ -9,15 +9,10 @@ import '../styles/cropperimg.scss';
 export class CropperImgDemoComponent extends React.Component<IProps, any> {
     render() {
         let ImgZoomInDemoApiData = [{
-            props:"imgUrl",
-            des:"图片地址",
-            type:"string",
-            default:"不传则为无"
-        },{
-            props:"className",
-            des:"图片类名",
-            type:"string",
-            default:"不传则为无"
+            props:"",
+            des:"",
+            type:"",
+            default:""
         }]
         return (
             <div className="cropper-img-demo-content">
@@ -47,7 +42,7 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                             }
                         </tbody>
                     </table>
-                    <ImgZoomInComponent imgUrl="../../assets/images/img_zoom_in.png" className="img-zoom-in-btn"/>
+                    <ImgZoomInComponent imgUrl="" className="img-zoom-in-btn"/>
             </div>
         );
     }
