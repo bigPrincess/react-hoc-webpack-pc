@@ -1,5 +1,6 @@
-import { IconComments } from './components/icons';
+import { IconComments,iconsList } from './components/icons';
 
 export {
-    IconComments
+    IconComments,
+    iconsList
 };

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { hoc } from '../containers/icon';
 import { IProps } from '../constants/icon';
-import { IconComments } from "../../../components/icons";
+import { IconComments,iconsList} from "../../../components/icons";
 import { Link } from "react-router-dom";
 import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
@@ -9,6 +9,7 @@ import '../styles/icon.scss';
 
 export class IconDemoComponent extends React.Component<IProps, any> {
     render() {
+        // console.log(iconsList);
         let IconDemoApiData = [{
             props:"type",
             des:"icon类型",
@@ -59,7 +60,11 @@ export class IconDemoComponent extends React.Component<IProps, any> {
                         </tbody>
                     </table>
                 <p>demo：</p>
-                <IconComments type="picture" width={40} height={40} color="#444"/>
+                {   
+                    iconsList.map(function (item) {
+                        return (<div>{item}<IconComments type={item} width={40} height={40} color="#444"/></div>)
+                    })
+                }
                  
                 <p>具体代码：</p>
                 <ImgZoomInComponent imgUrl="../../assets/images/icon.png"/>
