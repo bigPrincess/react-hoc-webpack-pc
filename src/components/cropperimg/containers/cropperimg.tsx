@@ -1,5 +1,5 @@
 import { compose,withHandlers,withState } from "recompose";
-import { IProps } from '../constants/imgzoomin';
+import { IProps } from '../constants/cropperimg';
 
 export const hoc = compose<IProps, any>(
     withState("isOpen", "setOpenState", false),

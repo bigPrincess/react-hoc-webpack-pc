@@ -1,6 +1,6 @@
-import { ImgZoomInDemoComponentWithHoc as ImgZoomInDemoComponent} from './components/imgzoomin';
+import { CropperImgDemoComponentWithHoc as CropperImgDemoComponent} from './components/cropperimg';
 import { RouterComponent } from './router';
 export {
-    ImgZoomInDemoComponent,
+    CropperImgDemoComponent,
     RouterComponent
 };

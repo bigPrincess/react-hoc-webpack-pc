@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Link } from "react-router-dom";
-import { hoc } from '../containers/imgzoomin';
-import { IProps } from '../constants/imgzoomin';
-
-import '../styles/imgzoomin.scss';
+import { hoc } from '../containers/cropperimg';
+import { IProps } from '../constants/cropperimg';
 import { ImgZoomInComponent } from "../../../components/imgzoomin/index";
 
-export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
+import '../styles/cropperimg.scss';
+
+export class CropperImgDemoComponent extends React.Component<IProps, any> {
     render() {
         let ImgZoomInDemoApiData = [{
             props:"imgUrl",
@@ -20,7 +20,7 @@ export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
             default:"不传则为无"
         }]
         return (
-            <div className="img-zoom-in-demo-content">
+            <div className="cropper-img-demo-content">
                 <Link to="/components" className="back">
                      返回demo主页面
                 </Link>
@@ -53,4 +53,4 @@ export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
     }
 }
 
-export const ImgZoomInDemoComponentWithHoc = hoc(ImgZoomInDemoComponent);
+export const CropperImgDemoComponentWithHoc = hoc(CropperImgDemoComponent);

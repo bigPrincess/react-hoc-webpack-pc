@@ -1,5 +1,5 @@
-import { ImgZoomInComponentHoc as ImgZoomInComponent } from './components/imgzoomin';
+import { CropperImgComponentHoc as CropperImgComponent } from './components/cropperimg';
 
 export {
-    ImgZoomInComponent,
+    CropperImgComponent,
 };

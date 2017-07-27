@@ -1,12 +1,12 @@
 import * as  React from 'react';
-import { IProps } from '../constants/imgzoomin';
-import { hoc } from '../containers/imgzoomin';
+import { IProps } from '../constants/cropperimg';
+import { hoc } from '../containers/cropperimg';
 import Lightbox from 'react-image-lightbox';
 
 
-import '../styles/imgzoomin.scss';
+import '../styles/cropperimg.scss';
 
-export class ImgZoomInComponent extends React.Component<IProps, any>{
+export class CropperImgComponent extends React.Component<IProps, any>{
     constructor(props, content) {
         super(props, content);
     }
@@ -29,4 +29,4 @@ export class ImgZoomInComponent extends React.Component<IProps, any>{
     }
 }
 
-export const ImgZoomInComponentHoc = hoc(ImgZoomInComponent);
+export const CropperImgComponentHoc = hoc(CropperImgComponent);
