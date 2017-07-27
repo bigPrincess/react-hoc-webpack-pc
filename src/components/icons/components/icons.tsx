@@ -20,8 +20,8 @@ export class IconComments extends React.Component<IProps, any> {
             color = "#666";
         }
 
-        let iconWidths = (width / 75.0) + "rem";
-        let icoHeight = (width / 75.0) + "rem";
+        let iconWidths = width;
+        let icoHeight = height;
 
         switch (type) {
             case "comments": return (<svg name="comments" width={iconWidths} height={icoHeight} viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
