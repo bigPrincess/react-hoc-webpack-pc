@@ -27,7 +27,7 @@ export class AccordionComponent extends React.Component<IProps, any>{
                                         <span className='menu-name'>{key.name}</span>                  
                                             <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>  
                                         </div>
-                                    {(key && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu,accData) : null}
+                                    {(key.submenu && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu,accData) : null}
                                 </li>
                             )
                     })
