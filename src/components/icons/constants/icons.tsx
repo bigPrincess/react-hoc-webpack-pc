@@ -15,5 +15,7 @@ export interface IProps {
     height ?:number;
 
     type ?:string;
+    classname ?:string;
+
 
 }
