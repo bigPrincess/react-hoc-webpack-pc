@@ -1,3 +1,7 @@
+
+### npm源设置
+npm set registry http://npm.corp.rs.com:4873/
+
 ## 使用说明:
 npm run start: 运行本地开发环境
 
@@ -16,8 +20,6 @@ api nodejs服务器, mock数据用
 src 源代码
 test 测试代码
 
-### npm源设置
-npm set registry http://npm.corp.rs.com:4873/
 
 ### 启动api服务器
 npm run api
