@@ -13,7 +13,7 @@ export class HomeComponent extends React.Component<IProps, any> {
                 
             {
                 "name": "Header插件",
-                "url": "header"
+                "url": ""
             },
             {
                 "name": "http请求",
@@ -42,7 +42,7 @@ export class HomeComponent extends React.Component<IProps, any> {
         ]
         return (
             <div className="demo-list">
-                <AccordionComponent width={'30'} height={'30'} menuArrs={accordarr} eveType = {'click'} currentColor={'rgba(102,102,102,1)'} title="这个是插件DEMO页哦"/>
+                <AccordionComponent width={'14'} height={'14'} menuArrs={accordarr} eveType = {'click'} currentColor={'rgba(102,102,102,1)'} title="这个是插件DEMO页哦"/>
            </div>
         );
     }

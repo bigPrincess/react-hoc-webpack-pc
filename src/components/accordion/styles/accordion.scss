@@ -51,6 +51,11 @@
                     -webkit-transition: -webkit-transform .6s;
                     transition: transform .6s,-webkit-transform .6s;
                 }
+                .more {
+                    -webkit-transform: rotate(-90deg);
+                    -moz-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+                }
 
                 .submenu {
                     // display: none;

@@ -23,10 +23,19 @@ export class AccordionComponent extends React.Component<IProps, any>{
                     menuarrs.map(function (key, index) {
                         return (
                                 <li>
-                                    <div className="link">
-                                        <span className='menu-name'>{key.name}</span>                  
-                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>  
+                                    {(key.url && key.url.length >= 1) ? (
+                                        <Link to={{ pathname: `${location.pathname}/${key.url}`}}>
+                                            <div className="link">
+                                                <span className='menu-name'>{key.name}</span>  
+                                                <IconComments classname="more" width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>         
+                                            </div>
+                                        </Link>
+                                    ) : 
+                                        <div className="link">
+                                            <span className='menu-name'>{key.name}</span>  
+                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>                                      
                                         </div>
+                                    }
                                     {(key.submenu && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu,accData) : null}
                                 </li>
                             )
