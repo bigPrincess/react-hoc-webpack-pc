@@ -4,6 +4,7 @@ import { IProps } from '../constants/icons';
 
 import '../styles/icons.scss';
 
+export const iconsList = ["comments"];
 export class IconComments extends React.Component<IProps, any> {
 
     render() {
