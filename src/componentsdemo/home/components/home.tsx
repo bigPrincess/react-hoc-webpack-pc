@@ -40,6 +40,9 @@ export class HomeComponent extends React.Component<IProps, any> {
                     {
                         "name":"自适应",
                         "url":"ApdaComponent"
+                    },{
+                        "name":"表单验证",
+                        "url":"Validation"
                     }
                 ]
             }

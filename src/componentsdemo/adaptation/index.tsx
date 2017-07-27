@@ -1,4 +1,4 @@
-import { AntdComponentHoc as AntdComponent} from './components/antd';
+import { ApdaComponentHoc as ApdaComponent} from './components/adaptation';
 export {
-    AntdComponent,
+    ApdaComponent,
 };
