@@ -36,6 +36,10 @@ export class HomeComponent extends React.Component<IProps, any> {
                     {
                         "name": "图片上传、剪切、下载",
                         "url": "cropperimg"
+                    },
+                    {
+                        "name": "消息提示框,loading等",
+                        "url": "message"
                     }
                 ]
             }
