@@ -84,14 +84,24 @@
                     -moz-animation: toggle 15s forwards;	/* Firefox */
                     -webkit-animation: toggle 15s forwards;	/* Safari 和 Chrome */
                     -o-animation: toggle 15s forwards;	/* Opera */
-                    .submenu svg  {
-                        -webkit-transform: rotate(0deg);
-                        -moz-transform: rotate(0deg);
-                        transform: rotate(0deg);
-                    }
+                    // .submenu svg  {
+                    //     -webkit-transform: rotate(0deg);
+                    //     -moz-transform: rotate(0deg);
+                    //     transform: rotate(0deg);
+                    // }
                 }
                 // &.active svg,.submenu .active svg,.submenu .active .submenu .active svg {
-                &.active svg,.submenu .active svg {
+                // &.active svg,.submenu .active svg {
+                //     -webkit-transform: rotate(-180deg);
+                //     -moz-transform: rotate(-180deg);
+                //     transform: rotate(-180deg);
+                // }
+                .link > svg {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                &.active > .link > svg {
                     -webkit-transform: rotate(-180deg);
                     -moz-transform: rotate(-180deg);
                     transform: rotate(-180deg);
