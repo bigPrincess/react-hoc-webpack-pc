@@ -7,6 +7,7 @@
             
             li { 
                 margin-bottom: 10px;
+                padding-left: 30px;
                 color: #444;
                 font-size: 14px;
                 // height: 50px;
@@ -51,13 +52,13 @@
                     transition: transform .6s,-webkit-transform .6s;
                 }
                 .more {
-                    -webkit-transform: rotate(-90deg);
-                    -moz-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg) !important;
+                    -moz-transform: rotate(-90deg) !important;
+                    transform: rotate(-90deg) !important;
                 }
 
                 .submenu {
-                    // display: none;
+                    display: none;
                     // opacity: 0;
                     // visibility: hidden;
                     position: relative;
@@ -66,7 +67,6 @@
                     // -moz-transition: all .3s;	/* Firefox 4 */
                     // -webkit-transition: all .3s;	/* Safari 和 Chrome */
                     // -o-transition: all .3s;	/* Opera */
-
                     li {
                         margin-bottom: 0;
                         border-bottom: 1px solid #eef;
@@ -84,15 +84,20 @@
                     -moz-animation: toggle 15s forwards;	/* Firefox */
                     -webkit-animation: toggle 15s forwards;	/* Safari 和 Chrome */
                     -o-animation: toggle 15s forwards;	/* Opera */
-
-}
-                &.active svg {
+                    .submenu svg  {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+                }
+                // &.active svg,.submenu .active svg,.submenu .active .submenu .active svg {
+                &.active svg,.submenu .active svg {
                     -webkit-transform: rotate(-180deg);
                     -moz-transform: rotate(-180deg);
                     transform: rotate(-180deg);
                 }
                 &.active > ul {
-                    // display: block;
+                    display: block;
                     // animation: toggle 5s;
                     // -moz-animation: toggle 5s;	/* Firefox */
                     // -webkit-animation: toggle 5s;	/* Safari 和 Chrome */

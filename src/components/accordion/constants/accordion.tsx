@@ -14,14 +14,9 @@ export interface IProps {
     renderCreateSubMenu ?: null; 
 
     /**
-     * 头部当前背景颜色
+     * 设置行的背景颜色
      */
     currentBgColor?:string;
-
-    /**
-     * 右箭头icon颜色
-     */
-    currentColor?:string;
     /**
      * 右边符号宽度
      */
@@ -30,4 +25,16 @@ export interface IProps {
      * 右边符号高度
      */
     height?:number;
+    /**
+     * 设置右边icon
+     */
+    righticon?:string;
+    /**
+     * 设置左边icon
+     */
+    lefticon?:string;
+    /**
+     * 设置字体,icon的颜色
+     */
+    currentColor?:string;
 }
