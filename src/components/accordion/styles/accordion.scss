@@ -35,7 +35,16 @@
                     -webkit-align-items: center;
                     -ms-flex-align: center;
                     align-items: center;
-                }
+
+                    span {
+                        color: #444;
+                    }
+
+                    svg{ 
+                        -webkit-transition: -webkit-transform .6s;
+                        transition: transform .6s,-webkit-transform .6s;
+                    }
+               }
                 a{ 
                     display:block; 
                     outline:none; 
@@ -43,14 +52,8 @@
                     &:hover{ 
                         background:#ccc; 
                     }
-                    span {
-                        color: #444;
-                    }
                 }
-                svg{ 
-                    -webkit-transition: -webkit-transform .6s;
-                    transition: transform .6s,-webkit-transform .6s;
-                }
+
                 .more {
                     -webkit-transform: rotate(-90deg) !important;
                     -moz-transform: rotate(-90deg) !important;
@@ -59,14 +62,15 @@
 
                 .submenu {
                     display: none;
+                    position: relative;
                     // opacity: 0;
                     // visibility: hidden;
-                    position: relative;
-                    background: #fff;
                     // transition: all .3s;
                     // -moz-transition: all .3s;	/* Firefox 4 */
                     // -webkit-transition: all .3s;	/* Safari 和 Chrome */
                     // -o-transition: all .3s;	/* Opera */
+                    background: #fff;
+
                     li {
                         margin-bottom: 0;
                         border-bottom: 1px solid #eef;
@@ -80,22 +84,12 @@
                 }
                 &.active {
                     // height: 100%;
-                                                        animation: toggle .5s;
+                    animation: toggle .5s;
                     -moz-animation: toggle 15s forwards;	/* Firefox */
                     -webkit-animation: toggle 15s forwards;	/* Safari 和 Chrome */
                     -o-animation: toggle 15s forwards;	/* Opera */
-                    // .submenu svg  {
-                    //     -webkit-transform: rotate(0deg);
-                    //     -moz-transform: rotate(0deg);
-                    //     transform: rotate(0deg);
-                    // }
                 }
-                // &.active svg,.submenu .active svg,.submenu .active .submenu .active svg {
-                // &.active svg,.submenu .active svg {
-                //     -webkit-transform: rotate(-180deg);
-                //     -moz-transform: rotate(-180deg);
-                //     transform: rotate(-180deg);
-                // }
+
                 .link > svg {
                     -webkit-transform: rotate(0deg);
                     -moz-transform: rotate(0deg);
