@@ -23,19 +23,23 @@ export class AccordionComponent extends React.Component<IProps, any>{
                     menuarrs.map(function (key, index) {
                         return (
                                 <li>
-                                    {(key.url && key.url.length >= 1) ? (
+                                    {/*{(key.url && key.url.length >= 1) ? (
                                         <Link to={{ pathname: `${location.pathname}/${key.url}`}}>
                                             <div className="link">
+                                                <IconComments  width={accData.width || 20} height={accData.height || 20} color={accData.currentColor} type={accData.lefticon || 'success'}/>                                                         
                                                 <span className='menu-name'>{key.name}</span>  
-                                                <IconComments classname="more" width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>         
+                                                <IconComments classname="more"  width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
                                             </div>
                                         </Link>
-                                    ) : 
+                                    ) : */}
                                         <div className="link">
-                                            <span className='menu-name'>{key.name}</span>  
-                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>                                      
+                                                <input type="hidden" className={""} value={(key.url && key.url.length >= 1) ? (key.url) : null}/>
+                                                <input type="hidden" className={""} value={(key.id && key.id.length >= 1) ? (key.id) : null}/>
+                                                <IconComments  width={accData.width || 20} height={accData.height || 20} color={accData.currentColor} type={accData.lefticon}/>                                                         
+                                                <span className='menu-name'>{key.name}</span>  
+                                                <IconComments width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
                                         </div>
-                                    }
+                                    {/*}*/}
                                     {(key.submenu && key.submenu.length >= 1) ? own.renderCreateSubMenu(key.submenu,accData) : null}
                                 </li>
                             )
@@ -56,16 +60,23 @@ export class AccordionComponent extends React.Component<IProps, any>{
                     SubMenu.map(function (key, index) {
                         return (
                             <li>
-                                {(key.url && key.url.length >= 1) ? (
+                                {/*{(key.url && key.url.length >= 1) ? (
                                     <Link to={{ pathname: `${location.pathname}/${key.url}`}}>
-                                        <div className="link"><span className='menu-name'>{key.name}</span>  <i className="fa fa-chevron-down"></i></div>
-                                    </Link>
-                                ) : 
-                                    <div className="link">
-                                        <span className='menu-name'>{key.name}</span>  
-                                            <IconComments width={accData.width || 40} height={accData.height || 40} color={accData.currentColor} type='more'/>                                      
+                                        <div className="link">
+                                                <IconComments  width={accData.width || 20} height={accData.height || 20} color={accData.currentColor} type={accData.lefticon || 'success'}/>                                                         
+                                                <span className='menu-name'>{key.name}</span>  
+                                                <IconComments classname='more'  width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
                                         </div>
-                                }
+                                    </Link>
+                                ) : */}
+                                    <div className="link">
+                                            <input type="hidden" id="pageUrl" value={(key.url && key.url.length >= 1) ? (key.url) : null}/>
+                                            <input type="hidden" id="objId" value={(key.id && key.id.length >= 1) ? (key.id) : null}/>
+                                            <IconComments  width={accData.width || 20} height={accData.height || 20} color={accData.currentColor} type={accData.lefticon}/>                                                         
+                                            <span className='menu-name'>{key.name}</span>  
+                                            <IconComments  width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
+                                    </div>
+                                {/*}*/}
                                 {(key.submenu && key.submenu.length >= 1) ? (own.renderCreateSubMenu(key.submenu,accData)) : null}
                             </li>
                         )

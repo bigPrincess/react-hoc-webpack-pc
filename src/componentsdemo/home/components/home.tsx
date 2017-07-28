@@ -46,7 +46,7 @@ export class HomeComponent extends React.Component<IProps, any> {
         return (
             <div className="demo-list">
                 <div className="demo-list-inner">
-                    <AccordionComponent width={'14'} height={'14'} menuArrs={accordarr} eveType={'click'} currentColor={'rgba(102,102,102,1)'} title="这个是插件DEMO页哦" />
+                    <AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'}/>
                 </div>
             </div>
         );

@@ -14,11 +14,11 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                 "submenu": [
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     },
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     }
                 ]
             },
@@ -27,7 +27,7 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                 "submenu": [
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     },
                     {
                         "name": "二级菜单",
@@ -37,19 +37,19 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                                 "submenu": [
                                     {
                                         "name": "四级菜单",
-                                        "url": ""
+                                        "url": "  "
                                     }
                                 ]
                             },
                             {
                                 "name": "三级菜单",
-                                "url": ""
+                                "url": "  "
                             }
                         ]
                     },
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     },
                     {
                         "name": "二级菜单",
@@ -59,18 +59,18 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                                 "submenu": [
                                     {
                                         "name": "四级菜单",
-                                        "url": ""
+                                        "url": " "
                                     },
                                     {
                                         "name": "四级菜单",
                                         "submenu": [
                                             {
                                                 "name": "五级菜单",
-                                                "url": ""
+                                                "url": "  "
                                             },
                                             {
                                                 "name": "五级菜单",
-                                                "url": ""
+                                                "url": "  "
                                             }
                                         ]
                                     }
@@ -78,13 +78,13 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                             },
                             {
                                 "name": "三级菜单",
-                                "url": ""
+                                "url": "  "
                             }
                         ]
                     },
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     }
                 ]
             },
@@ -93,22 +93,22 @@ export class AccordionDemoComponent extends React.Component<IProps, any> {
                 "submenu": [
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     },
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     },
                     {
                         "name": "二级菜单",
-                        "url": ""
+                        "url": "  "
                     }
                 ]
             }
         ]
         return (
             <div >
-                <AccordionComponent menuArrs={accordarr} eveType = {'click'} title="这个是插件DEMO页哦"/>
+                    <AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'}/>
             </div>
         );
     }
