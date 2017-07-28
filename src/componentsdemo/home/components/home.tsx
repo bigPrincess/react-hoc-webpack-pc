@@ -46,7 +46,15 @@ export class HomeComponent extends React.Component<IProps, any> {
         return (
             <div className="demo-list">
                 <div className="demo-list-inner">
-                    <AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'}/>
+                    <div><Link to="/components/http">http请求 ⇨</Link></div>
+                    <div><Link to="/components/imgzoomin">图片点击放大 ⇨</Link></div>
+                    <div><Link to="/components/accordion">多级折叠菜单 ⇨</Link></div>
+                    <div><Link to="/components/icon">icon图标 ⇨</Link></div>
+                    <div><Link to="/components/message">消息提示框,loading等</Link></div>
+                    <div><Link to="/components/ApdaComponent">自适应 ⇨</Link></div>
+                    <div><Link to="/components/cropperimg">图片上传、剪切 ⇨</Link></div>
+                    <div><Link to="/components/Validation">表单验证 ⇨</Link></div>
+                    {/*<AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'}/>*/}
                 </div>
             </div>
         );
