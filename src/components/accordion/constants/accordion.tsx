@@ -9,11 +9,6 @@ export interface IProps {
      */
     eveType ?: string;
     /**
-     * 调用子菜单
-     */
-    renderCreateSubMenu ?: null; 
-
-    /**
      * 设置行的背景颜色
      */
     currentBgColor?:string;
@@ -25,6 +20,7 @@ export interface IProps {
      * 右边符号高度
      */
     height?:number;
+
     /**
      * 设置右边icon
      */
@@ -37,4 +33,8 @@ export interface IProps {
      * 设置字体,icon的颜色
      */
     currentColor?:string;
+    /**
+     * 设置点击事件函数
+     */
+    onClick?:Function;
 }

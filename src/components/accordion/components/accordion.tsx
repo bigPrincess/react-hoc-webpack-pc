@@ -12,17 +12,20 @@ export class AccordionComponent extends React.Component<IProps, any>{
         super(props, content);
     }
     /**
-	 * 创建一级菜单栏
+	 * 创建一级菜单栏和子集菜单栏
 	 */
-    renderCreateMenu(menuarrs,accData) {
+    renderCreateMenu(menuarrs,accData,count) {
         let own = this;
-
+        ++count;
         return (
-            <ul>
+            <ul className={(count > 1) ? "submenu" : null}>
                 {
                     menuarrs.map(function (key, index) {
                         return (
-                                <li>
+                                <li  onClick={(e)=>{
+                                    e.stopPropagation();
+                                    accData.onClick(e);
+                                    }}>
                                     <div className="link">
                                         <input type="hidden" className="pageUrl" value={(key.url && key.url.length >0) ? (key.url) : null}/>
                                         <input type="hidden" className="objId" value={(key.id && key.id.length >0) ? (key.id) : null}/>
@@ -30,7 +33,7 @@ export class AccordionComponent extends React.Component<IProps, any>{
                                         <span className='menu-name'>{key.name}</span>  
                                         <IconComments classname={(!key.submenu) ? "more" : null} width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
                                     </div>
-                                    {(key.submenu && key.submenu.length > 0) ? own.renderCreateSubMenu(key.submenu,accData) : null}
+                                    {(key.submenu && key.submenu.length > 0) ? own.renderCreateMenu(key.submenu,accData,count) : null}
                                 </li>
                             )
                     })
@@ -39,39 +42,14 @@ export class AccordionComponent extends React.Component<IProps, any>{
         )
     }
 
-    /**
-	 * 创建submenu菜单栏
-	 */
-    renderCreateSubMenu(SubMenu,accData) {
-        let own = this;
-        return (
-            <ul className="submenu">
-                {
-                    SubMenu.map(function (key, index) {
-                        return (
-                            <li>
-                                <div className="link">
-                                    <input type="hidden" className="pageUrl" value={(key.url && key.url.length > 0) ? (key.url) : null}/>
-                                    <input type="hidden" className="objId" value={(key.id && key.id.length > 0) ? (key.id) : null}/>
-                                    <IconComments  width={accData.width || 20} height={accData.height || 20} color={accData.currentColor} type={accData.lefticon}/>                                                         
-                                    <span className='menu-name'>{key.name}</span>  
-                                    <IconComments classname={(!key.submenu) ? "more" : null}  width={accData.width || 16} height={accData.height || 16} color={accData.currentColor} type={accData.righticon || 'more'}/>         
-                                </div>
-                                {(key.submenu && key.submenu.length > 0) ? (own.renderCreateSubMenu(key.submenu,accData)) : null}
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        )
-    }
     render(): JSX.Element {
     // render() {
         let accData = this.props;
         let menuArrs  =  accData.menuArrs || '';
+        // accData.count == 1;
         return (
             <div id="accordion" className="m-accordion" style={{}}>
-                {(menuArrs && menuArrs.length > 0) ? this.renderCreateMenu(menuArrs,accData) : null}
+                {(menuArrs && menuArrs.length > 0) ? this.renderCreateMenu(menuArrs,accData,0) : null}
             </div>
         );
     }
