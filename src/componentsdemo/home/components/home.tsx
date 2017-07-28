@@ -46,7 +46,7 @@ export class HomeComponent extends React.Component<IProps, any> {
         return (
             <div className="demo-list">
                 <div className="demo-list-inner">
-                    <AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'} onClick={(e) => {
+                    <AccordionComponent menuArrs={accordarr} onClick={(e) => {
                         {/*console.log(e.currentTarget.getElementsByClassName('pageUrl'));*/}
                         let pageUrl = e.currentTarget.getElementsByClassName('pageUrl')[0].value;
                         window.location.href = pageUrl;
