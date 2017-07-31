@@ -8,7 +8,7 @@ import '../styles/home.scss';
 export class HomeComponent extends React.Component<IProps, any> {
     render() {
         return (
-            <div className="img-zoom-in-demo-content">
+            <div className="">
                 主页面
                 <MenuComponent />
             </div>
