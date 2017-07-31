@@ -12,49 +12,45 @@ export class HomeComponent extends React.Component<IProps, any> {
         let accordarr = [
             {
                 "name": "http请求",
-                "url": "http"
+                "url": "/components/http"
             },
             {
                 "name": "图片点击放大",
-                "url": "imgzoomin"
+                "url": "/components/imgzoomin"
             },
             {
                 "name": "多级折叠菜单",
-                "url": "accordion"
+                "url": "/components/accordion"
             },
             {
                 "name": "icon图标",
-                "url": "icon"
+                "url": "/components/icon"
             },
             {
                 "name": "消息提示框,loading等",
-                "url": "message"
+                "url": "/components/message"
             },
             {
                 "name": "自适应",
-                "url": "ApdaComponent"
+                "url": "/components/ApdaComponent"
             },
             {
                 "name": "图片上传、剪切",
-                "url": "cropperimg"
+                "url": "/components/cropperimg"
             },
             {
                 "name": "表单验证",
-                "url": "Validation"
+                "url": "/components/Validation"
             }
         ]
         return (
             <div className="demo-list">
                 <div className="demo-list-inner">
-                    <div><Link to="/components/http">http请求 ⇨</Link></div>
-                    <div><Link to="/components/imgzoomin">图片点击放大 ⇨</Link></div>
-                    <div><Link to="/components/accordion">多级折叠菜单 ⇨</Link></div>
-                    <div><Link to="/components/icon">icon图标 ⇨</Link></div>
-                    <div><Link to="/components/message">消息提示框,loading等</Link></div>
-                    <div><Link to="/components/ApdaComponent">自适应 ⇨</Link></div>
-                    <div><Link to="/components/cropperimg">图片上传、剪切 ⇨</Link></div>
-                    <div><Link to="/components/Validation">表单验证 ⇨</Link></div>
-                    {/*<AccordionComponent menuArrs={accordarr} currentColor={'rgba(102,102,102,1)'}/>*/}
+                    <AccordionComponent menuArrs={accordarr} onClick={(e) => {
+                        {/*console.log(e.currentTarget.getElementsByClassName('pageUrl'));*/}
+                        let pageUrl = e.currentTarget.getElementsByClassName('pageUrl')[0].value;
+                        window.location.href = pageUrl;
+                    }}/>
                 </div>
             </div>
         );
