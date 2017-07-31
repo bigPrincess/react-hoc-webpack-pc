@@ -41,6 +41,10 @@ export class HomeComponent extends React.Component<IProps, any> {
             {
                 "name": "表单验证",
                 "url": "/components/Validation"
+            },
+            {
+                "name": "日期控件",
+                "url": "/components/datepicker"
             }
         ]
         return (

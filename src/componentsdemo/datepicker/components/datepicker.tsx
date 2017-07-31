@@ -2,14 +2,19 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 import { hoc } from '../containers/datepicker';
 import { IProps } from '../constants/datepicker';
-import { message, Button } from 'antd';
-import { Spin, Switch, Alert } from 'antd';
+import { DatePicker, TimePicker } from 'antd';
+import moment from 'moment';
+// 推荐在入口文件全局设置 locale
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
-import '../styles/message.scss';
+import 'antd/dist/antd.css';
+import '../styles/datepicker.scss';
 
 
 export class DatepickerDemoComponent extends React.Component<IProps, any> {
     state = { loading: false }
+    
     toggle = (value) => {
         this.setState({ loading: value });
     }
@@ -25,31 +30,19 @@ export class DatepickerDemoComponent extends React.Component<IProps, any> {
                 <Link to="/components" className="back">
                     返回demo主页面
                 </Link>
-                <h4>Spin API 以及demo</h4>
-                API：<a href="https://ant.design/components/spin-cn/">https://ant.design/components/spin-cn/</a>
+                
+                <h4>DatePicker日期选择框 API 以及demo</h4>
+                API：<a href="https://ant.design/components/date-picker-cn/">https://ant.design/components/date-picker-cn/</a>
                 <p>DEMO:</p>
                 <div>
-                    <Spin spinning={this.state.loading}>
-                        <Alert
-                            message="Alert message title"
-                            description="Further details about the context of this alert."
-                            type="info"
-                        />
-                    </Spin>
-                    Loading state：<Switch checked={this.state.loading} onChange={this.toggle} />
+                    <DatePicker defaultValue={moment('2015-01-01', 'YYYY-MM-DD')} />                
                 </div>
-                <h4>Message API 以及demo</h4>
-                <a href="https://ant.design/components/message-cn/">https://ant.design/components/message-cn/</a><br/>
-                <div id="tableuu"></div>
-                <Button onClick={() => {
-                    message.config({
-                        top: 100,
-                        duration: 200,
-                        getContainer: () => document.getElementById("tableuu"),
-                    });
-                    message.loading(<div style={{ color: "red" }}>8888</div>, 0);
-                }}>loading</Button><br/>
-                <Button onClick={() => { message.destroy() }}>销毁</Button>
+                <h4>TimePicker时间选择框 API 以及demo</h4>
+                API：<a href="https://ant.design/components/time-picker-cn/">https://ant.design/components/time-picker-cn/</a>
+                <p>DEMO:</p>
+                <div>
+                    <TimePicker defaultValue={moment('13:30:56', 'HH:mm:ss')} />
+                </div>
             </div>
         );
     }
