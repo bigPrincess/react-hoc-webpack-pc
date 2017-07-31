@@ -47,7 +47,7 @@ export class ImgZoomInDemoComponent extends React.Component<IProps, any> {
                             }
                         </tbody>
                     </table>
-                    <ImgZoomInComponent imgUrl="../../assets/images/img_zoom_in.png" className="img-zoom-in-btn"/>
+                    <ImgZoomInComponent imgUrl="../../assets/images/imgzoomin/img_zoom_in.png" className="img-zoom-in-btn"/>
             </div>
         );
     }
