@@ -40,7 +40,11 @@ export class HomeComponent extends React.Component<IProps, any> {
             },
             {
                 "name": "表单验证",
-                "url": "Validation"
+                "url": "validation"
+            },
+            {
+                "name":"表格",
+                "url":"table"
             }
         ]
         return (
