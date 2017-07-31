@@ -67,7 +67,7 @@ export class IconDemoComponent extends React.Component<IProps, any> {
                 }
                  
                 <p>具体代码：</p>
-                <ImgZoomInComponent imgUrl="../../assets/images/icon.png"/>
+                <ImgZoomInComponent imgUrl="../../assets/images/icon/icon.png"/>
             </div>
         );
     }
