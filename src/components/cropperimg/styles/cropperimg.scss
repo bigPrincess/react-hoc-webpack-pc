@@ -1,0 +1,88 @@
+.column-cover-container{
+    width:240px;
+    height:135px;
+    border:1px solid #ddd;
+    position: relative;
+}
+.column-cover-container .column-cover{
+    height: 100%;
+}
+.column-cover-container .column-cover img{
+    width: 100%;
+    height: auto;
+}
+.column-cover-container input{
+    width: 100%;
+    height:100%;
+    outline: none;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cropper-popup-style{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, .2);
+}
+.cropper-popup-style .cropper-wrapper{
+    width:640px;
+    height:420px;
+    padding:3px;
+    border-radius: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50% );
+    -ms-transform: translate(-50%, -50% );
+    -o-transform: translate(-50%, -50% );
+    transform: translate(-50%, -50% );
+}
+.cropper-popup-style .cropper-header{
+    height:30px;
+}
+.cropper-popup-style .cropper-header-title{
+    height:30px;
+    margin:0;
+    line-height: 30px;
+    text-align: center;
+}
+.cropper-popup-style .close-btn{
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.cropper-popup-style .do-crop-btn{
+    width: 50px;
+    height: 28px;
+    color: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: #0275D8;
+    position: absolute;
+    left:300px;
+    bottom: 2px;
+}
+.cropper-popup-style .container{
+    width:100%;
+    height:360px;
+}
+.cropper-popup-style .cropper-point.point-se{
+    width:5px;
+    height:5px;
+}
