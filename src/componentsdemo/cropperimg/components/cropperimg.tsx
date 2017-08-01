@@ -43,8 +43,14 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                         }
                     </tbody>
                 </table> */}
-                <CropperImgComponent />
-
+                <CropperImgComponent
+                    action="//jsonplaceholder.typicode.com/posts/"
+                    multiple={false}
+                    picLength={3}
+                    picSize={2}
+                    //cropper={true}
+                    aspectRatio={16/9}
+                />
                 <ImgZoomInComponent imgUrl="" className="img-zoom-in-btn" />
             </div>
         );

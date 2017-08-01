@@ -36,7 +36,7 @@ module.exports = (webpackConfig) => {
     }));
 
 
-    retVal.output.publicPath = '/';
+    retVal.output.publicPath = '/jc_h5';
 
     return retVal;
 };

@@ -12,31 +12,31 @@ export class HomeComponent extends React.Component<IProps, any> {
         let accordarr = [
             {
                 "name": "http请求",
-                "url": "http"
+                "url": "/components/http"
             },
             {
                 "name": "图片点击放大",
-                "url": "imgzoomin"
+                "url": "/components/imgzoomin"
             },
             {
                 "name": "多级折叠菜单",
-                "url": "accordion"
+                "url": "/components/accordion"
             },
             {
                 "name": "icon图标",
-                "url": "icon"
+                "url": "/components/icon"
             },
             {
                 "name": "消息提示框,loading等",
-                "url": "message"
+                "url": "/components/message"
             },
             {
                 "name": "自适应",
-                "url": "ApdaComponent"
+                "url": "/components/ApdaComponent"
             },
             {
                 "name": "图片上传、剪切",
-                "url": "cropperimg"
+                "url": "/components/cropperimg"
             },
             {
                 "name": "表单验证",
@@ -50,7 +50,11 @@ export class HomeComponent extends React.Component<IProps, any> {
         return (
             <div className="demo-list">
                 <div className="demo-list-inner">
-                    <AccordionComponent width={'14'} height={'14'} menuArrs={accordarr} eveType={'click'} currentColor={'rgba(102,102,102,1)'} title="这个是插件DEMO页哦" />
+                    <AccordionComponent menuArrs={accordarr} onClick={(e) => {
+                        {/*console.log(e.currentTarget.getElementsByClassName('pageUrl'));*/}
+                        let pageUrl = e.currentTarget.getElementsByClassName('pageUrl')[0].value;
+                        window.location.href = pageUrl;
+                    }}/>
                 </div>
             </div>
         );

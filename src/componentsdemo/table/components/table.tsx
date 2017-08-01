@@ -1,62 +1,40 @@
 import * as React from 'react';
 import { hoc } from '../containers/table';
 import { IProps } from '../constants/table';
-import { Table, Icon } from 'antd';
+import { Table} from 'antd';
 
 import "../styles/table.scss";
 
 const columns = [{
     title: 'Name',
     dataIndex: 'name',
-    key: 'name',
-    render: text => <a href="#">{text}</a>,
+    sorter: true,
+    render: name => `${name.first} ${name.last}`,
+    width: '20%',
 }, {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'Gender',
+    dataIndex: 'gender',
+    filters: [
+        { text: 'Male', value: 'male' },
+        { text: 'Female', value: 'female' },
+    ],
+    width: '20%',
 }, {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-}, {
-    title: 'Action',
-    key: 'action',
-    render: (text, record) => (
-        <span>
-            <a href="#">Action 一 {record.name}</a>
-            <span className="ant-divider" />
-            <a href="#">Delete</a>
-            <span className="ant-divider" />
-            <a href="#" className="ant-dropdown-link">
-                More actions <Icon type="down" />
-            </a>
-        </span>
-    ),
-}];
-
-const data = [{
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-}, {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-}, {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    title: 'Email',
+    dataIndex: 'email',
 }];
 
 class TableComponent extends React.Component<IProps, any> {
+  
     render() {
-
-
         return (
-            <Table columns={columns} dataSource={data} />
+            <Table   columns={columns}
+              rowKey={record => record.registered}
+             dataSource={this.props.dataList.dataSource}
+              pagination={this.props.dataList.pagination}
+              loading={this.props.dataList.loading}
+               onChange={this.props.handleTableChange}
+            />
         );
     }
 }

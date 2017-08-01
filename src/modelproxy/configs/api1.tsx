@@ -1,4 +1,4 @@
-var host = "http://fc-c.dev.rs.com";
+var host = "http://jc-rsv.dev.rs.com/jc";
 
 module.exports = {
     "key": "api1",
@@ -31,11 +31,16 @@ module.exports = {
         "method": "post",
         "key": "post_noheader_params",
         "title": "获取微信config" 
-    },,{
+    },{
         "path":"/order/order",
         "method": "POST",
         "key": "post_header_params",
         "title": "用户下单 " 
+    },{
+        "path":"/demo/demo1",
+        "method": "GET",
+        "key": "get_menu",
+        "title": "获取菜单 " 
     }]
 }
 
