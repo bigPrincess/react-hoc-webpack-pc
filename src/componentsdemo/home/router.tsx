@@ -11,6 +11,7 @@ import { RouterComponent as AccordionDemoRouter } from '../accordion';
 import { ApdaComponent} from "../adaptation";
 import { ValidationComponent } from "../validation";
 import { TableComponent } from "../table";
+import { DatepickerDemoComponent } from "../datepicker";
 
 export class RouterComponent extends React.Component<any, any>{
     render() {
@@ -26,6 +27,7 @@ export class RouterComponent extends React.Component<any, any>{
                 <Route path="/components/ApdaComponent" component={ApdaComponent} />
                 <Route path="/components/validation" component={ValidationComponent}></Route>
                  <Route path="/components/table" component={TableComponent}></Route>
+                <Route path="/components/datepicker" component={DatepickerDemoComponent}></Route>
                 <Route path="/components" component={HomeComponent} />
             </Switch>
         );

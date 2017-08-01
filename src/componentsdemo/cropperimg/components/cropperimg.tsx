@@ -9,11 +9,36 @@ import '../styles/cropperimg.scss';
 
 export class CropperImgDemoComponent extends React.Component<IProps, any> {
     render() {
-        let ImgZoomInDemoApiData = [{
-            props: "",
-            des: "",
-            type: "",
-            default: ""
+        let cropperDemoApiData = [{
+            props: "action",
+            des: "图片上传地址",
+            type: "string",
+            default: "必传字段"
+        },{
+            props: "multiple",
+            des: "是否可以批量上传",
+            type: "boolean",
+            default: "false"
+        },{
+            props: "picLength",
+            des: "可以上传多少张图片",
+            type: "number",
+            default: "3"
+        },{
+            props: "picSize",
+            des: "图片大小",
+            type: "number",
+            default: "2"
+        },{
+            props: "cropper",
+            des: "是否可以剪切图片",
+            type: "boolean",
+            default: "false"
+        },{
+            props: "aspectRatio",
+            des: "剪切图片长宽比",
+            type: "number",
+            default: "不传则可以自己调整拖动"
         }]
         return (
             <div className="cropper-img-demo-content">
@@ -21,7 +46,7 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                     返回demo主页面
                 </Link>
                 <h4>cropperimg API:</h4>
-                {/* <table>
+                 <table>
                     <thead>
                         <tr>
                             <th>属性</th>
@@ -32,7 +57,7 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                     </thead>
                     <tbody>
                         {
-                            ImgZoomInDemoApiData.map((item, index) => {
+                            cropperDemoApiData.map((item, index) => {
                                 return <tr>
                                     <td>{item.props}</td>
                                     <td>{item.des}</td>
@@ -42,16 +67,20 @@ export class CropperImgDemoComponent extends React.Component<IProps, any> {
                             })
                         }
                     </tbody>
-                </table> */}
+                </table> 
+                <p>demo：</p>
+
                 <CropperImgComponent
                     action="//jsonplaceholder.typicode.com/posts/"
                     multiple={false}
-                    picLength={3}
+                    picLength={7}
                     picSize={2}
-                    //cropper={true}
+                    cropper={true}
                     aspectRatio={16/9}
                 />
-                <ImgZoomInComponent imgUrl="" className="img-zoom-in-btn" />
+
+                <p>相关代码：</p>
+                <ImgZoomInComponent imgUrl="../../assets/images/cropperimg/cropper.png" className="img-zoom-in-btn" />                
             </div>
         );
     }
